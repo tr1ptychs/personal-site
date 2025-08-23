@@ -1,344 +1,396 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wyatt Furois</title>
-    <meta
-      name="description"
-      content="Portfolio of Wyatt Furois. Web development projects, quick about, and the fastest way to contact me."
-    />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="animations.js"></script>
-    <style>
-      @supports (backdrop-filter: blur(8px)) {
-        .header-bg {
-          background-color: rgba(15, 23, 42, 0.7);
-        }
-      }
-    </style>
-  </head>
-  <body
-    class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-slate-100"
-  >
-    <!-- Header -->
-    <header
-      class="sticky top-0 z-50 backdrop-blur bg-slate-900/90 border-b border-white/10 header-bg"
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Wyatt Furois</title>
+        <meta
+            name="description"
+            content="Portfolio of Wyatt Furois. Web development projects, quick about, and the fastest way to contact me."
+        />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="animations.js"></script>
+        <style>
+            @supports (backdrop-filter: blur(8px)) {
+                .header-bg {
+                    background-color: rgba(15, 23, 42, 0.7);
+                }
+            }
+        </style>
+    </head>
+    <body
+        class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-slate-100"
     >
-      <nav
-        class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between"
-      >
-        <a href="#home" class="text-lg font-semibold tracking-tight"
-          >Wyatt Furois</a
+        <!-- Header -->
+        <header
+            class="sticky top-0 z-50 backdrop-blur bg-slate-900/90 border-b border-white/10 header-bg"
         >
-        <ul class="hidden sm:flex items-center gap-6 text-sm">
-          <li><a class="hover:opacity-80" href="#about">About</a></li>
-          <li><a class="hover:opacity-80" href="#projects">Projects</a></li>
-          <li><a class="hover:opacity-80" href="#contact">Contact</a></li>
-        </ul>
-        <a
-          id="emailTop"
-          aria-label="Email Wyatt"
-          class="hidden sm:inline-flex items-center rounded-xl px-3 py-2 text-sm font-medium bg-white text-slate-900 shadow hover:opacity-90"
-          >Email</a
-        >
-      </nav>
-    </header>
-
-    <!-- Hero -->
-    <section id="home" class="relative">
-      <div
-        aria-hidden
-        class="pointer-events-none absolute inset-x-0 -top-24 flex justify-center"
-      >
-        <div class="h-48 w-[40rem] bg-cyan-400/10 blur-3xl rounded-full"></div>
-      </div>
-      <div class="mx-auto max-w-6xl px-4 pt-14 pb-10">
-        <div class="max-w-3xl">
-          <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">
-            Howdy. I'm Wyatt. I like building, fixing, and playing.
-          </h1>
-          <p class="mt-4 text-slate-300 leading-relaxed">
-            Software engineer focused on web development. Former bike mechanic;
-            still good with tools, just different ones.
-          </p>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a
-              href="#projects"
-              class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium bg-white text-slate-900"
-              >See projects</a
+            <nav
+                class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between"
             >
-            <a
-              href="https://github.com/tr1ptychs"
-              rel="noopener"
-              class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium ring-1 ring-white/20 hover:bg-white/5"
-              >GitHub</a
+                <a href="#home" class="text-lg font-semibold tracking-tight"
+                    >Wyatt Furois</a
+                >
+                <ul class="hidden sm:flex items-center gap-6 text-sm">
+                    <li><a class="hover:opacity-80" href="#about">About</a></li>
+                    <li>
+                        <a class="hover:opacity-80" href="#projects"
+                            >Projects</a
+                        >
+                    </li>
+                    <li>
+                        <a class="hover:opacity-80" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <a
+                    id="emailTop"
+                    aria-label="Email Wyatt"
+                    class="hidden sm:inline-flex items-center rounded-xl px-3 py-2 text-sm font-medium bg-white text-slate-900 shadow hover:opacity-90"
+                    >Email</a
+                >
+            </nav>
+        </header>
+
+        <!-- Hero -->
+        <section id="home" class="relative">
+            <div
+                aria-hidden
+                class="pointer-events-none absolute inset-x-0 -top-24 flex justify-center"
             >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="mx-auto max-w-6xl px-4 py-12">
-      <div class="grid md:grid-cols-[1.2fr,1fr] gap-8 items-center">
-        <div>
-          <h2 class="text-2xl font-semibold">About Me</h2>
-          <p class="mt-3 text-slate-300">
-            B.S. in Computer Science. I build web apps end to end, emphasize
-            clear UX, fast load times, and boringly reliable deployments.
-          </p>
-          <h2 class="text-xl font-semibold mt-4">Stuff I've Used to Build Things</h2>
-          <ul
-            class="mt-4 text-sm text-slate-300 grid sm:grid-cols-2 gap-x-6 gap-y-2"
-          >
-            <li>• TypeScript, React, Remix</li>
-            <li>• Node, Express</li>
-            <li>• SQLite, Postgres, MySQL</li>
-            <li>• Fly.io, CI/CD with GitHub Actions</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
-          <h3 class="font-medium">Quick facts</h3>
-          <dl class="mt-3 grid grid-cols-2 gap-3 text-sm">
-            <div class="rounded-xl bg-white/5 p-3">
-              <dt class="text-slate-400">Location</dt>
-              <dd>US Central (CT)</dd>
+                <div
+                    class="h-48 w-[40rem] bg-cyan-400/10 blur-3xl rounded-full"
+                ></div>
             </div>
-            <div class="rounded-xl bg-white/5 p-3">
-              <dt class="text-slate-400">Currently</dt>
-              <dd>Shipping projects, job hunting</dd>
+            <div class="mx-auto max-w-6xl px-4 pt-14 pb-10">
+                <div class="max-w-3xl">
+                    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">
+                        Howdy! I'm Wyatt. I like building software, fixing
+                        things, and playing games.
+                    </h1>
+                    <p class="mt-4 text-slate-300 leading-relaxed">
+                        Software engineer focused on web development. Former
+                        bike mechanic; still good with tools, just different
+                        ones. Avid (Splatoon 3) salmon runner with some Balatro,
+                        Flight Simulator, and Trackmania sprinkled in.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <a
+                            href="#projects"
+                            class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium bg-white text-slate-900"
+                            >See projects</a
+                        >
+                        <a
+                            href="https://github.com/tr1ptychs"
+                            rel="noopener"
+                            class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium ring-1 ring-white/20 hover:bg-white/5"
+                            >GitHub</a
+                        >
+                    </div>
+                </div>
             </div>
-            <div class="rounded-xl bg-white/5 p-3 col-span-2">
-              <dt class="text-slate-400">Interests</dt>
-              <dd>Web performance, clean UI, game-y UX touches</dd>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="mx-auto max-w-6xl px-4 py-12">
+            <div class="grid md:grid-cols-[1.2fr,1fr] gap-8 items-center">
+                <div>
+                    <h2 class="text-2xl font-semibold">About Me</h2>
+                    <p class="mt-3 text-slate-300">
+                        B.S. in Computer Science. I build web apps end to end,
+                        emphasize clear UX, fast load times, and boringly
+                        reliable deployments.
+                    </p>
+                    <h2 class="text-xl font-semibold mt-4">
+                        Stuff I've Used to Build Things
+                    </h2>
+                    <ul
+                        class="mt-4 text-sm text-slate-300 grid sm:grid-cols-2 gap-x-6 gap-y-2"
+                    >
+                        <li>• TypeScript, React, Remix</li>
+                        <li>• Node, Express</li>
+                        <li>• SQLite, Postgres, MySQL</li>
+                        <li>• Fly.io, Vercel, CI/CD with GitHub Actions</li>
+                    </ul>
+                </div>
+                <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
+                    <h3 class="font-medium">Quick facts</h3>
+                    <dl class="mt-3 grid grid-cols-2 gap-3 text-sm">
+                        <div class="rounded-xl bg-white/5 p-3">
+                            <dt class="text-slate-400">Location</dt>
+                            <dd>US Central (CT)</dd>
+                        </div>
+                        <div class="rounded-xl bg-white/5 p-3">
+                            <dt class="text-slate-400">Currently</dt>
+                            <dd>Shipping projects, job hunting</dd>
+                        </div>
+                        <div class="rounded-xl bg-white/5 p-3 col-span-2">
+                            <dt class="text-slate-400">Interests</dt>
+                            <dd>
+                                Web performance, clean UI, game-y UX touches
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
             </div>
-          </dl>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Projects -->
-    <section id="projects" class="mx-auto max-w-6xl px-4 py-12">
-      <h2 class="text-2xl font-semibold">Here's some stuff I've built</h2>
-      <div id="projects-grid" class="mt-6 grid md:grid-cols-2 gap-6"></div>
-    </section>
+        <!-- Projects -->
+        <section id="projects" class="mx-auto max-w-6xl px-4 py-12">
+            <h2 class="text-2xl font-semibold">Here's some stuff I've built</h2>
+            <div
+                id="projects-grid"
+                class="mt-6 grid md:grid-cols-2 gap-6"
+            ></div>
+        </section>
 
-    <!-- Contact -->
-    <section id="contact" class="mx-auto max-w-6xl px-4 py-14">
-      <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
-        <h2 class="text-2xl font-semibold">Want to get in touch fast?</h2>
-        <p class="mt-2 text-sm text-slate-300">
-          I answer these in order: email → calendar → everything else.
-        </p>
-        <div class="mt-5 flex flex-wrap items-center gap-3">
-          <a
-            id="emailCta"
-            class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium bg-white text-slate-900"
-            >Email me</a
-          >
-          <a
-            id="discordCta"
-            class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium ring-1 ring-white/20 hover:bg-white/5"
-            >Discord</a
-          >
-        </div>
-        <ul class="mt-4 text-xs text-slate-300 space-y-1">
-          <li>Hiring managers/recruiters: please send me an email!</li>
-          <li>
-            Feature requests or bugs for eggrecords: open an issue on GitHub or
-            send an email with "[EGGRECORDS] | <your-issue-here>" as the subject.
-          </li>
-        </ul>
-      </div>
-    </section>
+        <!-- Contact -->
+        <section id="contact" class="mx-auto max-w-6xl px-4 py-14">
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+                <h2 class="text-2xl font-semibold">
+                    Want to get in touch fast?
+                </h2>
+                <p class="mt-2 text-sm text-slate-300">
+                    I should answer in a day or two.
+                </p>
+                <div class="mt-5 flex flex-wrap items-center gap-3">
+                    <a
+                        id="emailCta"
+                        class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium bg-white text-slate-900"
+                        >Email me</a
+                    >
+                    <a
+                        id="discordCta"
+                        class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium ring-1 ring-white/20 hover:bg-white/5"
+                        >Discord</a
+                    >
+                </div>
+                <ul class="mt-4 text-xs text-slate-300 space-y-1">
+                    <li>
+                        Hiring managers/recruiters: please send me an email! I'm
+                        happy to send you a current resume, and/or chat about
+                        opportunities that don't exactly fit my
+                        experience/skillset.
+                    </li>
+                    <li class="mt-4">
+                        For feature requests or bugs for EggRecords, you can:
+                        <ul class="mt-1 ml-10">
+                            <li>• Open an issue on GitHub</li>
+                            <li>
+                                • Send an email with "[EGGRECORDS] |
+                                [your-issue-here]" as the subject
+                            </li>
+                            <li>• Send me a message on Discord</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer class="border-t border-white/10">
-      <div
-        class="mx-auto max-w-6xl px-4 py-10 text-sm text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-3"
-      >
-        <p>© <span id="year"></span> Wyatt Furois</p>
-        <div class="flex items-center gap-4">
-          <a
-            class="hover:opacity-80"
-            href="https://github.com/tr1ptychs"
-            rel="noopener"
-            >GitHub</a
-          >
-          <a
-            class="hover:opacity-80"
-            href="https://www.linkedin.com/in/wyatt-furois/"
-            rel="noopener"
-            >LinkedIn</a
-          >
-          <a id="emailFooter" class="hover:opacity-80">Email</a>
-        </div>
-      </div>
-    </footer>
+        <!-- Footer -->
+        <footer class="border-t border-white/10">
+            <div
+                class="mx-auto max-w-6xl px-4 py-10 text-sm text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-3"
+            >
+                <p>© <span id="year"></span> Wyatt Furois</p>
+                <div class="flex items-center gap-4">
+                    <a
+                        class="hover:opacity-80"
+                        href="https://github.com/tr1ptychs"
+                        rel="noopener"
+                        >GitHub</a
+                    >
+                    <a
+                        class="hover:opacity-80"
+                        href="https://www.linkedin.com/in/wyattcharlesfurois/"
+                        rel="noopener"
+                        >LinkedIn</a
+                    >
+                    <a id="emailFooter" class="hover:opacity-80">Email</a>
+                </div>
+            </div>
+        </footer>
 
-    <script>
-      // --- Config ---
-      const contact = {
-        email: 'wyatt@furois.dev',
-        discord: {
-          label: 'tr1ptychs',
-          profile: 'https://discordapp.com/users/438912712794177558',
-        },
-      };
+        <script>
+            // --- Config ---
+            const contact = {
+                email: "wyatt@furois.dev",
+                discord: {
+                    label: "tr1ptychs",
+                    profile: "https://discordapp.com/users/438912712794177558",
+                },
+            };
 
-      const projects = [
-        {
-          title: 'This Website',
-          description:
-            "A simple site to showcase me and what I've made. Express server, static html, and Tailwind CSS.",
-          subdescription:
-            'Hover the project cards for a subtle Balatro-esque tilt animation.',
-          tech: ['TypeScript', 'Express', 'HTML', 'Tailwind', 'JavaScript'],
-          links: [
-            { label: "You're already here, silly", href: '#' },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/tr1ptychs/personal-site',
-            },
-          ],
-          image: '',
-        },
-        {
-          title: 'eggrecords.ink',
-          description:
-            'Web app to help Salmon Run players track highs, share with friends, and flex. Built with Remix, React, TypeScript, SQLite. Hosted on Fly.io.',
-          subdescription:
-            "It's hosted on fly.io free, so allow a few seconds for the machine to spin up. Fun!",
-          tech: ['Remix', 'React', 'TypeScript', 'SQLite', 'Fly.io'],
-          links: [
-            { label: 'Live', href: 'https://eggrecords.ink' },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/tr1ptychs/Egg-Records',
-            },
-          ],
-          image: 'eggrecords.png',
-        },
-        {
-          title: 'Utföra',
-          description:
-            'Lightweight task tracker focused on speed over ceremony. Keyboard-first, zero-config, local-first.',
-          subdescription:
-            'Built as a final project for a course at the University of Minnesota, Twin Cities',
-          tech: ['Express', 'JavaScript', 'Pug', 'MySQL'],
-          links: [
-            { label: 'GitHub', href: 'https://github.com/tr1ptychs/Utfora' },
-          ],
-          image: 'utfora.png',
-        },
-        {
-          title: 'Minimal Minesweeper',
-          description:
-            'A minimalist Minesweeper with clean animations and accessible controls.',
-          subdescription: 'I built this because I was bored on an airplane!',
-          tech: ['C++', 'RayLib'],
-          links: [
-            { label: 'GitHub', href: 'https://github.com/tr1ptychs/Minimal-Minesweeper' },
-          ],
-          image: 'minesweeper.png',
-        },
-      ];
+            const projects = [
+                {
+                    title: "This Website",
+                    description:
+                        "A simple site to showcase who I am and some stuff I've made.",
+                    subdescription:
+                        "Hover the project cards for a subtle Balatro-esque tilt animation.",
+                    tech: ["HTML", "Tailwind", "JavaScript", "Vercel"],
+                    links: [
+                        { label: "You're already here", href: "#" },
+                        {
+                            label: "GitHub",
+                            href: "https://github.com/tr1ptychs/wyatt",
+                        },
+                    ],
+                    image: "",
+                },
+                {
+                    title: "eggrecords.ink",
+                    description:
+                        "Web app to help Salmon Run players track high scores, share with friends, and flex. Enables teambuilding through shareable, human-readable profile URLs.",
+                    subdescription:
+                        "It's hosted on fly.io free, so allow a few seconds for the machine to spin up. Fun!",
+                    tech: ["Remix", "React", "TypeScript", "SQLite", "Fly.io"],
+                    links: [
+                        { label: "Live", href: "https://eggrecords.ink" },
+                        {
+                            label: "GitHub",
+                            href: "https://github.com/tr1ptychs/Egg-Records",
+                        },
+                    ],
+                    image: "eggrecords.png",
+                },
+                {
+                    title: "Utföra",
+                    description:
+                        "Task-tracker focused on simplicity through tagging, filtering, and deadlines.",
+                    subdescription:
+                        "Built as a final project for a course at the University of Minnesota, Twin Cities",
+                    tech: ["Express", "JavaScript", "Pug", "MySQL"],
+                    links: [
+                        {
+                            label: "GitHub",
+                            href: "https://github.com/tr1ptychs/Utfora",
+                        },
+                    ],
+                    image: "utfora.png",
+                },
+                {
+                    title: "Minimal Minesweeper",
+                    description:
+                        "A minimalist Minesweeper with clean, simple graphics, and keyboard controls.",
+                    subdescription:
+                        "I built this because I was bored on an airplane!",
+                    tech: ["C++", "RayLib"],
+                    links: [
+                        {
+                            label: "GitHub",
+                            href: "https://github.com/tr1ptychs/Minimal-Minesweeper",
+                        },
+                    ],
+                    image: "minesweeper.png",
+                },
+            ];
 
-      // --- Render helpers ---
-      const projectsGrid = document.getElementById('projects-grid');
+            // --- Render helpers ---
+            const projectsGrid = document.getElementById("projects-grid");
 
-      function el(tag, className, children = []) {
-        const node = document.createElement(tag);
-        if (className) node.className = className;
-        for (const child of children) node.append(child);
-        return node;
-      }
+            function el(tag, className, children = []) {
+                const node = document.createElement(tag);
+                if (className) node.className = className;
+                for (const child of children) node.append(child);
+                return node;
+            }
 
-      function renderProjectCard(p) {
-        const article = el(
-          'article',
-          'group rounded-2xl bg-white/5 border border-white/10 p-5 shadow-lg transition-transform will-change-transform tilt',
-        );
+            function renderProjectCard(p) {
+                const article = el(
+                    "article",
+                    "group rounded-2xl bg-white/5 border border-white/10 p-5 shadow-lg transition-transform will-change-transform tilt",
+                );
 
-        const header = el('header', 'flex items-start justify-between gap-4');
-        const h3 = el('h3', 'text-lg font-semibold tracking-tight');
-        h3.textContent = p.title;
-        header.append(h3);
+                const header = el(
+                    "header",
+                    "flex items-start justify-between gap-4",
+                );
+                const h3 = el("h3", "text-lg font-semibold tracking-tight");
+                h3.textContent = p.title;
+                header.append(h3);
 
-        article.append(header);
+                article.append(header);
 
-        if (p.image) {
-          const box = el(
-            'div',
-            'mt-4 aspect-video overflow-hidden rounded-xl border border-white/10 bg-slate-800',
-          );
-          const img = document.createElement('img');
-          img.src = p.image;
-          img.alt = 'Screenshot';
-          img.loading = 'lazy';
-          img.className = 'h-full w-full object-cover';
-          box.append(img);
-          article.append(box);
-        }
+                if (p.image) {
+                    const box = el(
+                        "div",
+                        "mt-4 aspect-video overflow-hidden rounded-xl border border-white/10 bg-slate-800",
+                    );
+                    const img = document.createElement("img");
+                    img.src = p.image;
+                    img.alt = "Screenshot";
+                    img.loading = "lazy";
+                    img.className = "h-full w-full object-cover";
+                    box.append(img);
+                    article.append(box);
+                }
 
-        const desc = el('p', 'mt-4 text-slate-300 text-sm leading-relaxed');
-        desc.textContent = p.description;
-        article.append(desc);
+                const desc = el(
+                    "p",
+                    "mt-4 text-slate-300 text-sm leading-relaxed",
+                );
+                desc.textContent = p.description;
+                article.append(desc);
 
-        const subdesc = el('p', 'mt-2 text-slate-400 text-sm leading-relaxed');
-        subdesc.textContent = p.subdescription;
-        article.append(subdesc);
+                const subdesc = el(
+                    "p",
+                    "mt-2 text-slate-400 text-sm leading-relaxed",
+                );
+                subdesc.textContent = p.subdescription;
+                article.append(subdesc);
 
-        const tech = el(
-          'ul',
-          'mt-3 flex flex-wrap gap-2 text-xs text-slate-300',
-        );
-        for (const t of p.tech) {
-          const li = el(
-            'li',
-            'rounded-full bg-white/5 px-3 py-1 border border-white/10',
-          );
-          li.textContent = t;
-          tech.append(li);
-        }
-        article.append(tech);
+                const tech = el(
+                    "ul",
+                    "mt-3 flex flex-wrap gap-2 text-xs text-slate-300",
+                );
+                for (const t of p.tech) {
+                    const li = el(
+                        "li",
+                        "rounded-full bg-white/5 px-3 py-1 border border-white/10",
+                    );
+                    li.textContent = t;
+                    tech.append(li);
+                }
+                article.append(tech);
 
-        const links = el('div', 'mt-4 flex items-center gap-4 text-sm');
-        for (const l of p.links) {
-          const a = document.createElement('a');
-          a.href = l.href;
-          a.textContent = l.label;
-          a.rel = 'noopener';
-          a.className = 'underline underline-offset-2 hover:opacity-80';
-          links.append(a);
-        }
-        article.append(links);
+                const links = el("div", "mt-4 flex items-center gap-4 text-sm");
+                for (const l of p.links) {
+                    const a = document.createElement("a");
+                    a.href = l.href;
+                    a.textContent = l.label;
+                    a.rel = "noopener";
+                    a.className =
+                        "underline underline-offset-2 hover:opacity-80";
+                    links.append(a);
+                }
+                article.append(links);
 
-        return article;
-      }
+                return article;
+            }
 
-      function renderProjects() {
-        projectsGrid.innerHTML = '';
-        for (const p of projects) projectsGrid.append(renderProjectCard(p));
-      }
+            function renderProjects() {
+                projectsGrid.innerHTML = "";
+                for (const p of projects)
+                    projectsGrid.append(renderProjectCard(p));
+            }
 
-      // --- Contact wiring ---
-      const mailto = `mailto:${contact.email}?subject=Hey%20Wyatt%20—%20re:%20[topic]&body=Who%20I%20am:%0AWhat%20I%20need:%0ATiming:%0ALinks:%0A`;
-      document.getElementById('emailTop').href = mailto;
-      document.getElementById('emailCta').href = mailto;
-      document.getElementById('emailFooter').href = mailto;
+            // --- Contact wiring ---
+            const mailto = `mailto:${contact.email}?subject=Hey%20Wyatt%20—%20re:%20[topic]&body=Who%20I%20am:%0AWhat%20I%20need:%0ATiming:%0ALinks:%0A`;
+            document.getElementById("emailTop").href = mailto;
+            document.getElementById("emailCta").href = mailto;
+            document.getElementById("emailFooter").href = mailto;
 
-      const discord = document.getElementById('discordCta');
-      discord.href = contact.discord.profile;
-      discord.textContent = `Discord: ${contact.discord.label}`;
+            const discord = document.getElementById("discordCta");
+            discord.href = contact.discord.profile;
+            discord.textContent = `Discord: ${contact.discord.label}`;
 
-      // --- Footer year ---
-      document.getElementById('year').textContent = new Date().getFullYear();
+            // --- Footer year ---
+            document.getElementById("year").textContent =
+                new Date().getFullYear();
 
-      // --- Init ---
-      renderProjects();
-    </script>
-  </body>
+            // --- Init ---
+            renderProjects();
+        </script>
+    </body>
 </html>
