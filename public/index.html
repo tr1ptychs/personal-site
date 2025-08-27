@@ -93,7 +93,7 @@
 
         <!-- About -->
         <section id="about" class="mx-auto max-w-6xl px-4 py-12">
-            <div class="grid md:grid-cols-[1.2fr,1fr] gap-8 items-center">
+            <div class="grid md:grid-cols-[1.5fr,1fr] gap-8 items-center">
                 <div>
                     <h2 class="text-2xl font-semibold">About Me</h2>
                     <p class="mt-3 text-slate-300">
@@ -101,17 +101,15 @@
                         emphasize clear UX, fast load times, and boringly
                         reliable deployments.
                     </p>
-                    <h2 class="text-xl font-semibold mt-4">
-                        Stuff I've Used to Build Things
+
+                    <h2 id="stack" class="text-xl font-semibold mt-8">
+                        Tech I've used to build things
                     </h2>
-                    <ul
-                        class="mt-4 text-sm text-slate-300 grid sm:grid-cols-2 gap-x-6 gap-y-2"
-                    >
-                        <li>• TypeScript, React, Remix</li>
-                        <li>• Node, Express</li>
-                        <li>• SQLite, Postgres, MySQL</li>
-                        <li>• Fly.io, Vercel, CI/CD with GitHub Actions</li>
-                    </ul>
+
+                    <div
+                        id="tech"
+                        class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+                    ></div>
                 </div>
                 <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
                     <h3 class="font-medium">Quick facts</h3>
@@ -168,8 +166,8 @@
                 <ul class="mt-4 text-xs text-slate-300 space-y-1">
                     <li>
                         Hiring managers/recruiters: please send me an email! I'm
-                        happy to send you a current resume, and/or chat about
-                        opportunities that don't exactly fit my
+                        happy to send you a current resume and chat about
+                        opportunities, even ones that don't exactly fit my
                         experience/skillset.
                     </li>
                     <li class="mt-4">
@@ -210,187 +208,8 @@
                 </div>
             </div>
         </footer>
-
-        <script>
-            // --- Config ---
-            const contact = {
-                email: "wyatt@furois.dev",
-                discord: {
-                    label: "tr1ptychs",
-                    profile: "https://discordapp.com/users/438912712794177558",
-                },
-            };
-
-            const projects = [
-                {
-                    title: "This Website",
-                    description:
-                        "A simple site to showcase who I am and some stuff I've made.",
-                    subdescription:
-                        "Hover the project cards for a subtle Balatro-esque tilt animation.",
-                    tech: ["HTML", "Tailwind", "JavaScript", "Vercel"],
-                    links: [
-                        { label: "You're already here", href: "#" },
-                        {
-                            label: "GitHub",
-                            href: "https://github.com/tr1ptychs/wyatt",
-                        },
-                    ],
-                    image: "",
-                },
-                {
-                    title: "eggrecords.ink",
-                    description:
-                        "Web app to help Salmon Run players track high scores, share with friends, and flex. Enables teambuilding through shareable, human-readable profile URLs.",
-                    subdescription:
-                        "It's hosted on fly.io free, so allow a few seconds for the machine to spin up. Fun!",
-                    tech: ["Remix", "React", "TypeScript", "SQLite", "Fly.io"],
-                    links: [
-                        { label: "Live", href: "https://eggrecords.ink" },
-                        {
-                            label: "GitHub",
-                            href: "https://github.com/tr1ptychs/Egg-Records",
-                        },
-                    ],
-                    image: "eggrecords.png",
-                },
-                {
-                    title: "Utföra",
-                    description:
-                        "Task-tracker focused on simplicity through tagging, filtering, and deadlines.",
-                    subdescription:
-                        "Built as a final project for a course at the University of Minnesota, Twin Cities",
-                    tech: ["Express", "JavaScript", "Pug", "MySQL"],
-                    links: [
-                        {
-                            label: "GitHub",
-                            href: "https://github.com/tr1ptychs/Utfora",
-                        },
-                    ],
-                    image: "utfora.png",
-                },
-                {
-                    title: "Minimal Minesweeper",
-                    description:
-                        "A minimalist Minesweeper with clean, simple graphics, and keyboard controls.",
-                    subdescription:
-                        "I built this because I was bored on an airplane!",
-                    tech: ["C++", "RayLib"],
-                    links: [
-                        {
-                            label: "GitHub",
-                            href: "https://github.com/tr1ptychs/Minimal-Minesweeper",
-                        },
-                    ],
-                    image: "minesweeper.png",
-                },
-            ];
-
-            // --- Render helpers ---
-            const projectsGrid = document.getElementById("projects-grid");
-
-            function el(tag, className, children = []) {
-                const node = document.createElement(tag);
-                if (className) node.className = className;
-                for (const child of children) node.append(child);
-                return node;
-            }
-
-            function renderProjectCard(p) {
-                const article = el(
-                    "article",
-                    "group rounded-2xl bg-white/5 border border-white/10 p-5 shadow-lg transition-transform will-change-transform tilt",
-                );
-
-                const header = el(
-                    "header",
-                    "flex items-start justify-between gap-4",
-                );
-                const h3 = el("h3", "text-lg font-semibold tracking-tight");
-                h3.textContent = p.title;
-                header.append(h3);
-
-                article.append(header);
-
-                if (p.image) {
-                    const box = el(
-                        "div",
-                        "mt-4 aspect-video overflow-hidden rounded-xl border border-white/10 bg-slate-800",
-                    );
-                    const img = document.createElement("img");
-                    img.src = p.image;
-                    img.alt = "Screenshot";
-                    img.loading = "lazy";
-                    img.className = "h-full w-full object-cover";
-                    box.append(img);
-                    article.append(box);
-                }
-
-                const desc = el(
-                    "p",
-                    "mt-4 text-slate-300 text-sm leading-relaxed",
-                );
-                desc.textContent = p.description;
-                article.append(desc);
-
-                const subdesc = el(
-                    "p",
-                    "mt-2 text-slate-400 text-sm leading-relaxed",
-                );
-                subdesc.textContent = p.subdescription;
-                article.append(subdesc);
-
-                const tech = el(
-                    "ul",
-                    "mt-3 flex flex-wrap gap-2 text-xs text-slate-300",
-                );
-                for (const t of p.tech) {
-                    const li = el(
-                        "li",
-                        "rounded-full bg-white/5 px-3 py-1 border border-white/10",
-                    );
-                    li.textContent = t;
-                    tech.append(li);
-                }
-                article.append(tech);
-
-                const links = el("div", "mt-4 flex items-center gap-4 text-sm");
-                for (const l of p.links) {
-                    const a = document.createElement("a");
-                    a.href = l.href;
-                    a.textContent = l.label;
-                    a.rel = "noopener";
-                    a.className =
-                        "underline underline-offset-2 hover:opacity-80";
-                    links.append(a);
-                }
-                article.append(links);
-
-                return article;
-            }
-
-            function renderProjects() {
-                projectsGrid.innerHTML = "";
-                for (const p of projects)
-                    projectsGrid.append(renderProjectCard(p));
-            }
-
-            // --- Contact wiring ---
-            const mailto = `mailto:${contact.email}?subject=Hey%20Wyatt%20—%20re:%20[topic]&body=Who%20I%20am:%0AWhat%20I%20need:%0ATiming:%0ALinks:%0A`;
-            document.getElementById("emailTop").href = mailto;
-            document.getElementById("emailCta").href = mailto;
-            document.getElementById("emailFooter").href = mailto;
-
-            const discord = document.getElementById("discordCta");
-            discord.href = contact.discord.profile;
-            discord.textContent = `Discord: ${contact.discord.label}`;
-
-            // --- Footer year ---
-            document.getElementById("year").textContent =
-                new Date().getFullYear();
-
-            // --- Init ---
-            renderProjects();
-        </script>
+        <script src="projects.js"></script>
+        <script src="tech.js"></script>
+        <script src="contact.js"></script>
     </body>
 </html>
