@@ -16,7 +16,7 @@ const projects = [
         href: "https://github.com/tr1ptychs/react-sweeper",
       },
     ],
-    image: "minesweeper.png",
+    image: "reactsweeper.webp",
   },
   {
     title: "eggrecords.ink",
@@ -32,7 +32,7 @@ const projects = [
         href: "https://github.com/tr1ptychs/Egg-Records",
       },
     ],
-    image: "eggrecords.png",
+    image: "eggrecords.webp",
   },
   {
     title: "Utföra",
@@ -47,7 +47,7 @@ const projects = [
         href: "https://github.com/tr1ptychs/Utfora",
       },
     ],
-    image: "utfora.png",
+    image: "utfora.webp",
   },
   {
     title: "This Website",
@@ -62,7 +62,7 @@ const projects = [
         href: "https://github.com/tr1ptychs/wyatt",
       },
     ],
-    image: "",
+    image: "here.webp",
   },
 ];
 
