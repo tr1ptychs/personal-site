@@ -91,13 +91,13 @@ function renderProjectCard(p) {
   if (p.image) {
     const box = el(
       "div",
-      "mt-4 aspect-video overflow-hidden rounded-xl border border-white/10 bg-slate-800",
+      "mt-4 overflow-hidden rounded-xl border border-white/10 bg-slate-800",
     );
     const img = document.createElement("img");
     img.src = p.image;
     img.alt = "Screenshot";
     img.loading = "lazy";
-    img.className = "h-full w-full object-cover";
+    img.className = "h-full w-full";
     box.append(img);
     article.append(box);
   }
