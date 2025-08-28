@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
       label: "tr1ptychs",
       profile: "https://discordapp.com/users/438912712794177558",
     },
+    linkedin: "https://www.linkedin.com/in/wyattcharlesfurois/",
   };
 
   const mailto = `mailto:${contact.email}?subject=Hey%20Wyatt%20—%20re:%20[topic]&body=Who%20I%20am:%0AWhat%20I%20need:%0ATiming:%0ALinks:%0A`;

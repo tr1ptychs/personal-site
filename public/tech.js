@@ -1,29 +1,18 @@
 const tech = [
+  { name: "Languages", content: ["TypeScript", "JavaScript", "Python"] },
+  { name: "Frontend", content: ["React", "Remix", "Tailwind CSS", "HTML/CSS"] },
+  { name: "Build & Tooling", content: ["Vite", "ESLint", "Prettier", "npm"] },
+  { name: "Backend", content: ["Node.js", "Express"] },
+  { name: "Data", content: ["SQLite", "MySQL", "PostgreSQL"] },
+  { name: "Testing", content: ["Vitest", "Stryker", "React Testing Library"] },
   {
-    name: "Frontend",
-    content: [
-      "TypeScript",
-      "JavaScript",
-      "React",
-      "Remix",
-      "Vite",
-      "Tailwind CSS",
-    ],
+    name: "DevOps & Deploy",
+    content: ["GitHub Actions", "Fly.io", "Vercel"],
   },
   {
-    name: "Backend",
-    content: ["Node.js", "JavaScript", "Express"],
+    name: "Tools",
+    content: ["Git", "GitHub", "Zed"],
   },
-  { name: "Databases", content: ["SQLite", "MySQL", "PostgreSQL"] },
-  {
-    name: "DevOps & Cloud",
-    content: ["Docker", "fly.io", "Vercel", "Github Actions"],
-  },
-  {
-    name: "Testing & Quality",
-    content: ["Vitest", "Stryker", "ESLint", "Prettier"],
-  },
-  { name: "Tools", content: ["Git", "GitHub", "npm"] },
 ];
 
 const techSection = document.getElementById("tech");
@@ -37,13 +26,17 @@ function el(tag, className, children = []) {
 function renderTechCard(s) {
   const card = el(
     "div",
-    "rounded-xl border border-slate-700/50 bg-slate-800/30 p-4",
+    "rounded-xl border flex-grow border-slate-700/50 bg-slate-800/30 p-4",
   );
 
-  const title = el("h3", "text-sm font-semibold text-slate-200", [s.name]);
+  const title = el(
+    "h3",
+    "pb-2 border-b border-slate-700/50 text-center font-semibold text-slate-200",
+    [s.name],
+  );
   card.append(title);
 
-  const list = el("ul", "mt-2 flex flex-wrap gap-2");
+  const list = el("ul", "mt-2 flex flex-wrap justify-center gap-2");
   for (const tool of s.content) {
     const item = el(
       "li",

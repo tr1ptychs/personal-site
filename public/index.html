@@ -3,11 +3,17 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Wyatt Furois</title>
+        <title>Wyatt Furois — Software Engineer</title>
         <meta
             name="description"
             content="Portfolio of Wyatt Furois. Web development projects, quick about, and the fastest way to contact me."
         />
+        <meta property="og:title" content="Wyatt Furois — Software Engineer" />
+        <meta
+            property="og:description"
+            content="Web projects with clean & fast UI and reliable deployments."
+        />
+        <meta property="og:type" content="website" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="animations.js"></script>
@@ -93,23 +99,27 @@
 
         <!-- About -->
         <section id="about" class="mx-auto max-w-6xl px-4 py-12">
-            <div class="grid md:grid-cols-[1.5fr,1fr] gap-8 items-center">
+            <div class="grid md:grid-cols-[1.2fr,1fr] gap-8 items-center">
                 <div>
-                    <h2 class="text-2xl font-semibold">About Me</h2>
-                    <p class="mt-3 text-slate-300">
-                        B.S. in Computer Science. I build web apps end to end,
-                        emphasize clear UX, fast load times, and boringly
-                        reliable deployments.
-                    </p>
-
-                    <h2 id="stack" class="text-xl font-semibold mt-8">
-                        Tech I've used to build things
-                    </h2>
-
-                    <div
-                        id="tech"
-                        class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
-                    ></div>
+                    <h2 class="text-3xl font-semibold">About Me</h2>
+                    <div class="mt-3 space-y-3 text-slate-300">
+                        <p class="text-slate-400">
+                            B.S. in Computer Science (UMN-TC 2025).
+                        </p>
+                        <p>
+                            I build web apps end to end and care about clear UX,
+                            fast load times, and boringly reliable deployments.
+                        </p>
+                        <p>
+                            I start with a real workflow, ship a small useful
+                            slice, and iterate based on usage. The feel matters
+                            as much as the function.
+                        </p>
+                        <p>
+                            Ultimately, seeing an idea come to life and become
+                            refined is what drives me.
+                        </p>
+                    </div>
                 </div>
                 <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
                     <h3 class="font-medium">Quick facts</h3>
@@ -125,12 +135,26 @@
                         <div class="rounded-xl bg-white/5 p-3 col-span-2">
                             <dt class="text-slate-400">Interests</dt>
                             <dd>
-                                Web performance, clean UI, game-y UX touches
+                                Building tools I'll want to use, then refining
+                                them for others.
                             </dd>
                         </div>
                     </dl>
                 </div>
             </div>
+            <h2 id="stack" class="text-xl font-semibold mt-8">
+                Tech I've used to build things:
+            </h2>
+            <h3 class="text-slate-400">
+                I've used some other stuff too, but I'll spare you the 200-item
+                tech résumé salad.
+            </h3>
+
+            <div
+                id="tech"
+                class="mt-4 flex flex-wrap md:justify-between gap-4"
+            ></div>
+            <h2 class="text-xl font-semibold mt-4"></h2>
         </section>
 
         <!-- Projects -->
@@ -164,21 +188,24 @@
                     >
                 </div>
                 <ul class="mt-4 text-xs text-slate-300 space-y-1">
-                    <li>
-                        Hiring managers/recruiters: please send me an email! I'm
-                        happy to send you a current resume and chat about
-                        opportunities, even ones that don't exactly fit my
-                        experience/skillset.
-                    </li>
+                    <li>Hiring managers/recruiters and the like:</li>
+                    <ul class="mt-1 ml-10">
+                        <li>
+                            — Send me an email! I'm happy brush up my résumé and
+                            chat about opportunities, even ones that don't
+                            exactly fit my experience/skillset. At the end of
+                            the day, I like building stuff.
+                        </li>
+                    </ul>
                     <li class="mt-4">
-                        For feature requests or bugs for EggRecords, you can:
+                        For feature requests, bugs, etc. you can:
                         <ul class="mt-1 ml-10">
-                            <li>• Open an issue on GitHub</li>
+                            <li>— Open an issue on GitHub</li>
                             <li>
-                                • Send an email with "[EGGRECORDS] |
+                                — Send an email with "[site-name] |
                                 [your-issue-here]" as the subject
                             </li>
-                            <li>• Send me a message on Discord</li>
+                            <li>— Send me a message on Discord</li>
                         </ul>
                     </li>
                 </ul>

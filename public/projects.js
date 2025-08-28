@@ -1,10 +1,15 @@
 const projects = [
   {
-    title: "React-Sweeper",
+    title: "ReactSweeper",
     description:
-      "Web minesweeper built with React and TypeScript. 100% branch, statement, function, line coverage. 100% mutation coverage of core board logic, 90+% everywhere else.",
+      "Deterministic Minesweeper with chording, keyboard play, and mutation-tested core logic. Play shareable seeded boards, daily challenges, and normal random games.",
+    highlights: [
+      "100% mutation score on core board logic; 100% branch/stmt/func/line coverage",
+      "Q/W keyboard controls for desktop and long-press flag for mobile users",
+      "CI/CD with GitHub Actions: Automated testing and deployment",
+    ],
     subdescription:
-      "Click the image to open a modal and play! Use q or left click for reveal, w or right click for flag. Chording is supported by left click/q.",
+      "I have spent too many hours of my life playing minesweeper.",
     tech: ["Vite", "React", "Tailwind", "TypeScript", "Vitest", "Stryker"],
     links: [
       {
@@ -21,7 +26,12 @@ const projects = [
   {
     title: "eggrecords.ink",
     description:
-      "Web app to help Salmon Run players track high scores, share with friends, and flex. Enables teambuilding through shareable, human-readable profile URLs.",
+      "Salmon Run high score tracker. Enables teambuilding through shareable, human-readable profile URLs.",
+    highlights: [
+      "Submit, update, delete, display your best Salmon Run scores on a per-map basis",
+      "Discord-based OAuth for easy signup",
+      "CI/CD with GitHub Actions and Fly.io. Tests on PRs, auto-deploy on main",
+    ],
     subdescription:
       "It's hosted on fly.io free, so allow a few seconds for the machine to spin up. Fun!",
     tech: ["Remix", "React", "TypeScript", "SQLite", "Fly.io"],
@@ -39,8 +49,8 @@ const projects = [
     description:
       "Task-tracker focused on simplicity through tagging, filtering, and deadlines.",
     subdescription:
-      "Built as a final project for a course at the University of Minnesota, Twin Cities",
-    tech: ["Express", "JavaScript", "Pug", "MySQL"],
+      "Built as a final project for a course at the University of Minnesota, Twin Cities.",
+    tech: ["Express.js", "JavaScript", "Pug", "MySQL"],
     links: [
       {
         label: "GitHub",
@@ -105,6 +115,19 @@ function renderProjectCard(p) {
   const desc = el("p", "mt-4 text-slate-300 text-sm leading-relaxed");
   desc.textContent = p.description;
   article.append(desc);
+
+  if (p.highlights) {
+    const highlights = el(
+      "ul",
+      "mt-4 flex flex-wrap gap-2 text-xs text-slate-300",
+    );
+    for (const h of p.highlights) {
+      const li = el("li", "px-3 py-1");
+      li.textContent = "— " + h;
+      highlights.append(li);
+    }
+    article.append(highlights);
+  }
 
   const subdesc = el("p", "mt-2 text-slate-400 text-sm leading-relaxed");
   subdesc.textContent = p.subdescription;
