@@ -2,7 +2,7 @@ const projects = [
   {
     title: "ReactSweeper",
     description:
-      "Deterministic Minesweeper with chording, keyboard play, and mutation-tested core logic. Play shareable seeded boards, daily challenges, and normal random games.",
+      "Deterministic Minesweeper with chording, keyboard play, and mutation-tested core logic.",
     highlights: [
       "100% mutation score on core board logic; 100% branch/stmt/func/line coverage",
       "Q/W keyboard controls for desktop and long-press flag for mobile users",
