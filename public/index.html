@@ -37,7 +37,7 @@
         >
         <header
             class="sticky top-0 z-50 backdrop-blur bg-slate-900/90 border-b border-white/10 header-bg"
-            role="header"
+            role="banner"
         >
             <nav
                 class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between"
@@ -118,11 +118,13 @@
             <section
                 id="about"
                 class="mx-auto max-w-6xl px-4 py-12 scroll-mt-24"
-                role="aboutme"
+                aria-labelledby="about-heading"
             >
                 <div class="grid md:grid-cols-[1.2fr,1fr] gap-8 items-center">
                     <div>
-                        <h2 class="text-3xl font-semibold">About Me</h2>
+                        <h2 id="about-heading" class="text-3xl font-semibold">
+                            About Me
+                        </h2>
                         <div class="mt-3 space-y-3 text-slate-300">
                             <p class="text-slate-400">
                                 B.S. in Computer Science (UMN-TC 2025).
@@ -184,9 +186,9 @@
             <section
                 id="projects"
                 class="mx-auto max-w-6xl px-4 py-12 scroll-mt-24"
-                role="projects"
+                aria-labelledby="projects-heading"
             >
-                <h2 class="text-2xl font-semibold">
+                <h2 id="projects-heading" class="text-2xl font-semibold">
                     Here's some stuff I've built
                 </h2>
                 <div
@@ -199,10 +201,10 @@
             <section
                 id="contact"
                 class="mx-auto max-w-6xl px-4 py-14"
-                role="contact"
+                aria-labelledby="contact-heading"
             >
                 <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
-                    <h2 class="text-2xl font-semibold">
+                    <h2 id="contact-heading" class="text-2xl font-semibold">
                         Want to get in touch fast?
                     </h2>
                     <p class="mt-2 text-sm text-slate-300">
