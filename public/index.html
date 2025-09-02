@@ -16,7 +16,10 @@
         <meta property="og:type" content="website" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <script src="https://cdn.tailwindcss.com"></script>
-        <script src="animations.js"></script>
+        <script src="animations.js" defer></script>
+        <script src="projects.js" defer></script>
+        <script src="tech.js" defer></script>
+        <script src="contact.js" defer></script>
         <style>
             @supports (backdrop-filter: blur(8px)) {
                 .header-bg {
@@ -29,11 +32,17 @@
         class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-slate-100"
     >
         <!-- Header -->
+        <a href="#home" class="sr-only focus:not-sr-only focus-visible:ring p-2"
+            >Skip to content</a
+        >
         <header
             class="sticky top-0 z-50 backdrop-blur bg-slate-900/90 border-b border-white/10 header-bg"
+            role="header"
         >
             <nav
                 class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between"
+                aria-label="Primary"
+                role="navigation"
             >
                 <a href="#home" class="text-lg font-semibold tracking-tight"
                     >Wyatt Furois</a
@@ -53,171 +62,195 @@
                     id="emailTop"
                     aria-label="Email Wyatt"
                     class="hidden sm:inline-flex items-center rounded-xl px-3 py-2 text-sm font-medium bg-white text-slate-900 shadow hover:opacity-90"
+                    href="mailto:wyatt@furois.dev"
                     >Email</a
                 >
             </nav>
         </header>
 
         <!-- Hero -->
-        <section id="home" class="relative scroll-mt-24">
-            <div
-                aria-hidden
-                class="pointer-events-none absolute inset-x-0 -top-24 flex justify-center"
+        <main role="main">
+            <section
+                id="home"
+                class="relative scroll-mt-24"
+                role="introduction"
             >
                 <div
-                    class="h-48 w-[40rem] bg-cyan-400/10 blur-3xl rounded-full"
-                ></div>
-            </div>
-            <div class="mx-auto max-w-6xl px-4 pt-14 pb-10">
-                <div class="max-w-3xl">
-                    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">
-                        Howdy! I'm Wyatt. I like building software, fixing
-                        things, and playing games.
-                    </h1>
-                    <p class="mt-4 text-slate-300 leading-relaxed">
-                        Software engineer focused on web development. Former
-                        bike mechanic; still good with tools, just different
-                        ones. Avid (Splatoon 3) salmon runner with some Balatro,
-                        Flight Simulator, and Trackmania sprinkled in.
-                    </p>
-                    <div class="mt-6 flex flex-wrap gap-3">
-                        <a
-                            href="#projects"
-                            class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium bg-white text-slate-900"
-                            >See projects</a
+                    aria-hidden
+                    class="pointer-events-none absolute inset-x-0 -top-24 flex justify-center"
+                >
+                    <div
+                        class="h-48 w-[40rem] bg-cyan-400/10 blur-3xl rounded-full"
+                    ></div>
+                </div>
+                <div class="mx-auto max-w-6xl px-4 pt-14 pb-10">
+                    <div class="max-w-3xl">
+                        <h1
+                            class="text-4xl sm:text-5xl font-bold tracking-tight"
                         >
-                        <a
-                            href="https://github.com/tr1ptychs"
-                            rel="noopener"
-                            class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium ring-1 ring-white/20 hover:bg-white/5"
-                            >GitHub</a
-                        >
+                            Howdy! I'm Wyatt. I like building software, fixing
+                            things, and playing games.
+                        </h1>
+                        <p class="mt-4 text-slate-300 leading-relaxed">
+                            Software engineer focused on web development. Former
+                            bike mechanic; still good with tools, just different
+                            ones. Avid (Splatoon 3) salmon runner with some
+                            Balatro, Flight Simulator, and Trackmania sprinkled
+                            in.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <a
+                                href="#projects"
+                                class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium bg-white text-slate-900"
+                                >See projects</a
+                            >
+                            <a
+                                href="https://github.com/tr1ptychs"
+                                class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium ring-1 ring-white/20 hover:bg-white/5"
+                                >GitHub</a
+                            >
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- About -->
-        <section id="about" class="mx-auto max-w-6xl px-4 py-12 scroll-mt-24">
-            <div class="grid md:grid-cols-[1.2fr,1fr] gap-8 items-center">
-                <div>
-                    <h2 class="text-3xl font-semibold">About Me</h2>
-                    <div class="mt-3 space-y-3 text-slate-300">
-                        <p class="text-slate-400">
-                            B.S. in Computer Science (UMN-TC 2025).
-                        </p>
-                        <p>
-                            I build web apps end to end and care about clear UX,
-                            fast load times, and boringly reliable deployments.
-                        </p>
-                        <p>
-                            I start with a real workflow, ship a small useful
-                            slice, and iterate based on usage. The feel matters
-                            as much as the function.
-                        </p>
-                        <p>
-                            Ultimately, seeing an idea come to life and become
-                            refined is what drives me.
-                        </p>
+            <!-- About -->
+            <section
+                id="about"
+                class="mx-auto max-w-6xl px-4 py-12 scroll-mt-24"
+                role="aboutme"
+            >
+                <div class="grid md:grid-cols-[1.2fr,1fr] gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl font-semibold">About Me</h2>
+                        <div class="mt-3 space-y-3 text-slate-300">
+                            <p class="text-slate-400">
+                                B.S. in Computer Science (UMN-TC 2025).
+                            </p>
+                            <p>
+                                I build web apps end to end and care about clear
+                                UX, fast load times, and boringly reliable
+                                deployments.
+                            </p>
+                            <p>
+                                I start with a real workflow, ship a small
+                                useful slice, and iterate based on usage. The
+                                feel matters as much as the function.
+                            </p>
+                            <p>
+                                Ultimately, seeing an idea come to life and
+                                become refined is what drives me.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="rounded-2xl bg-white/5 border border-white/10 p-5"
+                    >
+                        <h3 class="font-medium">Quick info</h3>
+                        <dl class="mt-3 grid grid-cols-2 gap-3 text-sm">
+                            <div class="rounded-xl bg-white/5 p-3">
+                                <dt class="text-slate-400">Location</dt>
+                                <dd>US Central (CT)</dd>
+                            </div>
+                            <div class="rounded-xl bg-white/5 p-3">
+                                <dt class="text-slate-400">Currently</dt>
+                                <dd>Shipping projects, job hunting</dd>
+                            </div>
+                            <div class="rounded-xl bg-white/5 p-3 col-span-2">
+                                <dt class="text-slate-400">Interests</dt>
+                                <dd>
+                                    Building tools I'll want to use, then
+                                    refining them for others.
+                                </dd>
+                            </div>
+                        </dl>
                     </div>
                 </div>
-                <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
-                    <h3 class="font-medium">Quick info</h3>
-                    <dl class="mt-3 grid grid-cols-2 gap-3 text-sm">
-                        <div class="rounded-xl bg-white/5 p-3">
-                            <dt class="text-slate-400">Location</dt>
-                            <dd>US Central (CT)</dd>
-                        </div>
-                        <div class="rounded-xl bg-white/5 p-3">
-                            <dt class="text-slate-400">Currently</dt>
-                            <dd>Shipping projects, job hunting</dd>
-                        </div>
-                        <div class="rounded-xl bg-white/5 p-3 col-span-2">
-                            <dt class="text-slate-400">Interests</dt>
-                            <dd>
-                                Building tools I'll want to use, then refining
-                                them for others.
-                            </dd>
-                        </div>
-                    </dl>
-                </div>
-            </div>
-            <h2 id="stack" class="text-xl font-semibold mt-8">
-                Tech I've used to build things:
-            </h2>
-            <h3 class="text-slate-400">
-                I've used some other stuff too, but I'll spare you the 200-item
-                tech résumé salad.
-            </h3>
-
-            <div
-                id="tech"
-                class="mt-4 flex flex-wrap md:justify-between gap-4"
-            ></div>
-        </section>
-
-        <!-- Projects -->
-        <section
-            id="projects"
-            class="mx-auto max-w-6xl px-4 py-12 scroll-mt-24"
-        >
-            <h2 class="text-2xl font-semibold">Here's some stuff I've built</h2>
-            <div
-                id="projects-grid"
-                class="mt-6 grid md:grid-cols-2 gap-6"
-            ></div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="mx-auto max-w-6xl px-4 py-14">
-            <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
-                <h2 class="text-2xl font-semibold">
-                    Want to get in touch fast?
+                <h2 id="stack" class="text-xl font-semibold mt-8">
+                    Tech I've used to build things:
                 </h2>
-                <p class="mt-2 text-sm text-slate-300">
-                    I should answer in a day or two.
-                </p>
-                <div class="mt-5 flex flex-wrap items-center gap-3">
-                    <a
-                        id="emailCta"
-                        class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium bg-white text-slate-900"
-                        >Email me</a
-                    >
-                    <a
-                        id="discordCta"
-                        class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium ring-1 ring-white/20 hover:bg-white/5"
-                        >Discord</a
-                    >
+                <h3 class="text-slate-400">
+                    I've used some other stuff too, but I'll spare you the
+                    200-item tech résumé salad.
+                </h3>
+
+                <div
+                    id="tech"
+                    class="mt-4 flex flex-wrap md:justify-between gap-4"
+                ></div>
+            </section>
+
+            <!-- Projects -->
+            <section
+                id="projects"
+                class="mx-auto max-w-6xl px-4 py-12 scroll-mt-24"
+                role="projects"
+            >
+                <h2 class="text-2xl font-semibold">
+                    Here's some stuff I've built
+                </h2>
+                <div
+                    id="projects-grid"
+                    class="mt-6 grid md:grid-cols-2 gap-6"
+                ></div>
+            </section>
+
+            <!-- Contact -->
+            <section
+                id="contact"
+                class="mx-auto max-w-6xl px-4 py-14"
+                role="contact"
+            >
+                <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+                    <h2 class="text-2xl font-semibold">
+                        Want to get in touch fast?
+                    </h2>
+                    <p class="mt-2 text-sm text-slate-300">
+                        I should answer in a day or two.
+                    </p>
+                    <div class="mt-5 flex flex-wrap items-center gap-3">
+                        <a
+                            id="emailCta"
+                            class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium bg-white text-slate-900"
+                            >Email me</a
+                        >
+                        <a
+                            id="discordCta"
+                            class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium ring-1 ring-white/20 hover:bg-white/5"
+                            >Discord</a
+                        >
+                    </div>
+                    <ul class="mt-4 text-xs text-slate-300 space-y-1">
+                        <li>Hiring managers/recruiters and the like:</li>
+                        <li>
+                            <ul class="mt-1 ml-10">
+                                <li>
+                                    — Send me an email! I'm happy brush up my
+                                    résumé and chat about opportunities, even
+                                    ones that don't exactly fit my
+                                    experience/skillset. At the end of the day,
+                                    I like building stuff.
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-4">
+                            For feature requests, bugs, etc. you can:
+                            <ul class="mt-1 ml-10">
+                                <li>— Open an issue on GitHub</li>
+                                <li>
+                                    — Send an email with "[site-name] |
+                                    [your-issue-here]" as the subject
+                                </li>
+                                <li>— Send me a message on Discord</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="mt-4 text-xs text-slate-300 space-y-1">
-                    <li>Hiring managers/recruiters and the like:</li>
-                    <li>
-                        <ul class="mt-1 ml-10">
-                            <li>
-                                — Send me an email! I'm happy brush up my résumé
-                                and chat about opportunities, even ones that
-                                don't exactly fit my experience/skillset. At the
-                                end of the day, I like building stuff.
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="mt-4">
-                        For feature requests, bugs, etc. you can:
-                        <ul class="mt-1 ml-10">
-                            <li>— Open an issue on GitHub</li>
-                            <li>
-                                — Send an email with "[site-name] |
-                                [your-issue-here]" as the subject
-                            </li>
-                            <li>— Send me a message on Discord</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </section>
+            </section>
+        </main>
 
         <!-- Footer -->
-        <footer class="border-t border-white/10">
+        <footer class="border-t border-white/10" role="contentinfo">
             <div
                 class="mx-auto max-w-6xl px-4 py-10 text-sm text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-3"
             >
@@ -239,8 +272,5 @@
                 </div>
             </div>
         </footer>
-        <script src="projects.js"></script>
-        <script src="tech.js"></script>
-        <script src="contact.js"></script>
     </body>
 </html>

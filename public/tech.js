@@ -51,7 +51,7 @@ function renderTechCard(s) {
 }
 
 function renderTechSection() {
-  techSection.innerHTML = "";
+  techSection;
   for (const s of tech) techSection.append(renderTechCard(s));
 }
 

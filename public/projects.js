@@ -22,6 +22,7 @@ const projects = [
       },
     ],
     image: "reactsweeper.webp",
+    alt: "Screenshot of React Sweeper, a Minesweeper clone built with React in mid-game with revealed tiles.",
   },
   {
     title: "eggrecords.ink",
@@ -43,6 +44,7 @@ const projects = [
       },
     ],
     image: "eggrecords.webp",
+    alt: "Screenshot of Egg Records, a Salmon Run score tracker displaying personal bests per map",
   },
   {
     title: "Utföra",
@@ -58,6 +60,7 @@ const projects = [
       },
     ],
     image: "utfora.webp",
+    alt: "Screenshot of Utföra, a task manager web app showing a dashboard of tasks with status labels",
   },
   {
     title: "This Website",
@@ -160,7 +163,6 @@ function renderProjectCard(p) {
 }
 
 function renderProjects() {
-  projectsGrid.innerHTML = "";
   for (const p of projects) projectsGrid.append(renderProjectCard(p));
 }
 
