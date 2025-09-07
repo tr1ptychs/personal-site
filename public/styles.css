@@ -237,9 +237,6 @@
   .col-span-2 {
     grid-column: span 2 / span 2;
   }
-  .float-left {
-    float: left;
-  }
   .float-right {
     float: right;
   }
@@ -267,17 +264,11 @@
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
-  .mr-20 {
-    margin-right: calc(var(--spacing) * 20);
-  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
   .ml-3 {
     margin-left: calc(var(--spacing) * 3);
-  }
-  .ml-8 {
-    margin-left: calc(var(--spacing) * 8);
   }
   .ml-10 {
     margin-left: calc(var(--spacing) * 10);
@@ -359,9 +350,6 @@
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
-  }
-  .gap-50 {
-    gap: calc(var(--spacing) * 50);
   }
   .space-y-1 {
     :where(& > :not(:last-child)) {

@@ -1,8 +1,8 @@
-window.addEventListener('DOMContentLoaded', () => {
-  const tiltCards = document.querySelectorAll('.tilt');
+window.addEventListener("DOMContentLoaded", () => {
+  const tiltCards = document.querySelectorAll(".tilt");
 
   tiltCards.forEach((card) => {
-    card.addEventListener('mousemove', (e) => {
+    card.addEventListener("mousemove", (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
@@ -19,10 +19,20 @@ window.addEventListener('DOMContentLoaded', () => {
       card.style.boxShadow = `${shadowX}px ${shadowY}px 30px rgba(0, 0, 0, 0.25), ${shadowX * 0.5}px ${shadowY * 0.5}px 10px rgba(0, 0, 0, 0.15)`;
     });
 
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "rotateX(0deg) rotateY(0deg)";
       card.style.boxShadow =
-        '0 15px 30px -5px rgba(0, 0, 0, 0.25), 0 5px 10px -5px rgba(0, 0, 0, 0.15)';
+        "0 15px 30px -5px rgba(0, 0, 0, 0.25), 0 5px 10px -5px rgba(0, 0, 0, 0.15)";
+    });
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
     });
   });
 });
