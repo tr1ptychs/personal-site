@@ -12,8 +12,8 @@ window.addEventListener("DOMContentLoaded", () => {
       const rotateX = ((y - centerY) / centerY) * -5;
       const rotateY = ((x - centerX) / centerX) * 5;
 
-      const shadowX = ((x - centerX) / centerX) * -5;
-      const shadowY = ((y - centerY) / centerY) * -5;
+      const shadowY = ((y - centerY) / centerY) * -15;
+      const shadowX = ((x - centerX) / centerX) * -15;
 
       card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
       card.style.boxShadow = `${shadowX}px ${shadowY}px 30px rgba(0, 0, 0, 0.25), ${shadowX * 0.5}px ${shadowY * 0.5}px 10px rgba(0, 0, 0, 0.15)`;
